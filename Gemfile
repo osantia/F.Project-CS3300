@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+git_source(:github) { |repo| "https://github.com/osantia/F.Project-CS3300.git" }
 
 ruby '2.7.0'
 
@@ -27,12 +27,13 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+heroku stack:set heroku-18
+
 group :production do
   gem 'pg', '~> 0.21' # for Heroku deployment
   gem 'rails_12factor'
 end
 
-heroku stack:set heroku-18
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
