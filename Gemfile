@@ -3,10 +3,12 @@ git_source(:github) { |repo| "https://github.com/osantia/F.Project-CS3300.git" }
 
 ruby '2.7.0'
 
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.5'
 # Use sqlite3 as the database for Active Record
 
+gem 'simplecov', require: false
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -36,6 +38,7 @@ end
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
+gem 'mini_racer'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -44,7 +47,9 @@ end
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
+  gem 'capybara'
   gem 'sqlite3'
+  gem 'rspec-rails', '~> 3.7'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
@@ -60,7 +65,7 @@ end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '>= 2.15'
+  gem 'capybara'
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
