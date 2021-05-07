@@ -13,8 +13,8 @@ script:
  
 deploy:
  provider: heroku
- api_key: YOUT_ACCOUNT_API_HERE
- app: YOUR_APP_NAME_HERE
+ api_key: 9d6d522d-f240-4840-9d55-44185c0f46f3
+ app: quiet-sands-90716
  run: "rake db:migrate"
  on:
   all_branches: true
