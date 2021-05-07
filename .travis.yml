@@ -13,7 +13,7 @@ script:
  
 deploy:
  provider: heroku
- api_key: 9d6d522d-f240-4840-9d55-44185c0f46f3
+ api_key: lol
  app: quiet-sands-90716
  run: "rake db:migrate"
  on:
