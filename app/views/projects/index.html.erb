@@ -1,28 +1,62 @@
 <p id="notice"><%= notice %></p>
 
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <% if user_signed_in? %>
+          <a class="nav-link" href="#" >Log out</a>
+        <% else %>
+          <a class="nav-link" href="users/sign_in">Log in</a>
+        <% end %>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="jumbotron">
+  <h1 class="display-4">Hello, world!</h1>
+  <p class="lead">F. Project for CS 3300</p>
+  <hr class="my-4">
+  <p>This project utilizes bootstrap to make the portfolio more visually appealing</p>
+</div>
+
 <h1>Projects</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="card">
+<div class="card-body">
+   Worked on:
+</div>
+</div>
 
-  <tbody>
-    <% @projects.each do |project| %>
+
+<div class="card-group">
+<% @projects.each do |project| %>
+  <div class="card-block">
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
       <tr>
-        <td><%= project.title %></td>
-        <td><%= project.description %></td>
+        <h5 class="card-title"> <td><%= project.title %></td> </h5>
+        <h6 class="card-subtitle mb-2 text-muted"><td><%= project.description %></td></h6>
         <td><%= link_to 'Show', project %></td>
         <td><%= link_to 'Edit', edit_project_path(project) %></td>
         <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+      </div>
+      </div>
+    </div>
+<% end %>
+</div>
+
+
+
 
 <br>
 

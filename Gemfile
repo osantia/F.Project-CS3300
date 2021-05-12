@@ -8,6 +8,10 @@ ruby '2.7.0'
 gem 'rails', '~> 5.2.5'
 # Use sqlite3 as the database for Active Record
 
+gem 'sassc', '~> 2.1.0'
+gem 'bootstrap', '~> 4.6.0'
+
+
 gem 'simplecov', require: false
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
@@ -24,6 +28,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
+gem 'jquery-rails'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
